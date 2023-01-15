@@ -21,7 +21,6 @@
 body {
   margin: 0;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  /* Barlow Semi Condensed 600, 700 */
   background-image: radial-gradient(at 50% 0, #1f3756, #141539);
   color: white;
   min-height: 100vh;
