@@ -6,45 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- CAMBIAR POR styles.min.css al finalizar el proyecto -->
     <link rel="stylesheet" href="css/styles.css" />
     <title>Rock Paper Scissors</title>
   </head>
 
   <body>
     <main id="main" class="main">
-
       <div class="score-container">
         <div class="score">
-<p>YOU</p>
-<p id="your-score">0</p>
+          <h2 class="score__title">YOU</h2>
+          <p class="score__number" id="your-score">0</p>
         </div>
-        <h1>Rock Paper Scissors</h1>
+        <h1 class="title">
+          Rock<span class="block">Paper</span
+          ><span class="block">Scissors</span>
+        </h1>
         <div class="score">
-          <p>PC</p>
-          <p id="computer-score">0</p>
+          <h2 class="score__title">PC</h2>
+          <p class="score__number" id="computer-score">0</p>
         </div>
       </div>
 
       <div class="icon-container" id="icon-container">
-      <div id="paper" class="button button--paper"></div>
-      <div id="scissors" class="button button--scissors"></div>
-      <div id="rock" class="button button--rock"></div>
+        <div id="paper" class="button button--paper">
+          <img class="icon" src="assets/images/icon-paper.svg" alt="" />
+        </div>
+        <div id="scissors" class="button button--scissors">
+          <img class="icon" src="assets/images/icon-scissors.svg" alt="" />
+        </div>
+        <div id="rock" class="button button--rock">
+          <img class="icon" src="assets/images/icon-rock.svg" alt="" />
+        </div>
       </div>
 
       <div class="result-container" id="result-container">
-        <div><p>You picked</p>
-        <img id="you-picked" src=""></div>
-        <div><p id="result"></p>
-        <button>PLAY AGAIN</button></div>
-        <div><p>Computer picked</p>
-        <img id="computer-picked"></div>
+        <div>
+          <p>You picked</p>
+          <img id="you-picked" src="" />
+        </div>
+        <div>
+          <p id="result"></p>
+          <button>PLAY AGAIN</button>
+        </div>
+        <div>
+          <p>Computer picked</p>
+          <img id="computer-picked" />
+        </div>
       </div>
-
     </main>
     <script src="js/scripts.js"></script>
   </body>
