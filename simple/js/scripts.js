@@ -56,10 +56,10 @@ const resultGame = () => {
 
 iconContainerElement.addEventListener('click', ev => {
   youChoose = ev.target.id;
-  youPickedIcon.src = `assets/images/icon-${ev.target.id}.svg`;
+  youPickedIcon.src = `../assets/images/icon-${ev.target.id}.svg`;
   youPicked.classList.add(`button--${ev.target.id}`);
   computerChooses = optionsArray[randomNumber()];
-  computerPickedIcon.src = `assets/images/icon-${computerChooses}.svg`;
+  computerPickedIcon.src = `../assets/images/icon-${computerChooses}.svg`;
   computerPicked.classList.add(`button--${computerChooses}`);
   resultGame();
 });
