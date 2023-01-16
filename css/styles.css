@@ -1,12 +1,3 @@
-/* ### Primary
-- Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
-- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
-- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
-- Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
-- Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
-- Radial Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%)
-*/
-
 :root {
   --dark-text: hsl(229, 25%, 31%);
   --score-text: hsl(229, 64%, 46%);
@@ -15,7 +6,7 @@
 
 * {
   box-sizing: border-box;
-  outline: 1px dashed red;
+  /* outline: 1px dashed red; */
 }
 
 body {
@@ -83,6 +74,7 @@ img {
 }
 
 .icon-container {
+  display: block;
   background-image: url(../assets/images/bg-triangle.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -148,26 +140,26 @@ img {
 }
 
 .result-container {
+  display: none;
   width: 800px;
   margin: 0 auto;
-  display: flex;
   gap: 2rem;
 }
 
 .result {
-  font-size: 2rem;
+  font-size: 3rem;
   text-transform: uppercase;
   text-align: center;
 }
 
 .column {
   flex-basis: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
-font-size: 2rem;
-text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .play-again-button {
@@ -175,6 +167,14 @@ text-align: center;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 0.5rem;
   border-radius: 0.5rem;
-  font-family:inherit;
+  font-family: inherit;
   font-size: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.none {
+  display: none;
 }

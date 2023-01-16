@@ -1,6 +1,7 @@
 const yourScoreElement = document.getElementById('your-score');
 const computerScoreElement = document.getElementById('computer-score');
 const iconContainerElement = document.getElementById('icon-container');
+const resultContainerElement = document.getElementById('result-container');
 const paperElement = document.getElementById('paper');
 const scissorsElement = document.getElementById('scissors');
 const rockElement = document.getElementById('rock');
@@ -12,7 +13,10 @@ const gameOptions = {
 };
 const resultElement = document.getElementById('result');
 const youPicked = document.getElementById('you-picked');
+const youPickedIcon = document.getElementById('you-picked-icon');
 const computerPicked = document.getElementById('computer-picked');
+const computerPickedIcon = document.getElementById('computer-picked-icon');
+const playAgainElement = document.getElementById('play-again');
 
 let youChoose = '';
 let computerChooses = '';
@@ -33,6 +37,8 @@ const printScore = () => {
 };
 
 const resultGame = () => {
+  iconContainerElement.classList.add('none');
+  resultContainerElement.classList.add('flex');
   if (youChoose === computerChooses) {
     resultElement.textContent = 'Empate';
     return;
@@ -50,8 +56,25 @@ const resultGame = () => {
 
 iconContainerElement.addEventListener('click', ev => {
   youChoose = ev.target.id;
+  youPickedIcon.src = `assets/images/icon-${ev.target.id}.svg`;
+  youPicked.classList.add(`button--${ev.target.id}`);
   computerChooses = optionsArray[randomNumber()];
-  console.log('Has elegido ' + youChoose);
-  console.log('Ordenador ha elegido ' + computerChooses);
+  computerPickedIcon.src = `assets/images/icon-${computerChooses}.svg`;
+  computerPicked.classList.add(`button--${computerChooses}`);
   resultGame();
+});
+
+playAgainElement.addEventListener('click', () => {
+  iconContainerElement.classList.remove('none');
+  resultContainerElement.classList.remove('flex');
+  youPicked.classList.remove(
+    'button--paper',
+    'button--scissors',
+    'button--rock'
+  );
+  computerPicked.classList.remove(
+    'button--paper',
+    'button--scissors',
+    'button--rock'
+  );
 });
