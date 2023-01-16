@@ -32,7 +32,7 @@ img {
 }
 
 .main {
-  max-width: 600px;
+  max-width: 900px;
   margin: 2rem auto;
 }
 
@@ -147,12 +147,8 @@ img {
     0 0 2rem 1rem rgba(151, 20, 51, 0.7);
 }
 
-.icon {
-  object-fit: contain;
-}
-
 .result-container {
-  width: 400px;
+  width: 800px;
   margin: 0 auto;
   display: flex;
   gap: 2rem;
@@ -162,4 +158,23 @@ img {
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
+}
+
+.column {
+  flex-basis: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+font-size: 2rem;
+text-align: center;
+}
+
+.play-again-button {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-family:inherit;
+  font-size: 2rem;
 }
